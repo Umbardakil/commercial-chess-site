@@ -370,6 +370,7 @@ nav ul a:hover {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  flex-wrap: wrap;
 }
 .btn {
   display: inline-block;
@@ -400,6 +401,13 @@ nav ul a:hover {
 }
 
 @media all and (max-width: 800px) {
+  .under-feature {
+    text-align: center;
+    padding: 1rem;
+  }
+  .under-feature h2 {
+    font-size: 2.5rem;
+  }
   .showcase-pic {
     display: none;
   }
@@ -434,5 +442,71 @@ nav ul a:hover {
   .features .container .col-6 {
     grid-column: 1;
     grid-row: 6;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .showcase .container::before {
+    height: 12rem;
+  }
+  .rates h2 {
+    text-align: center;
+    padding: 1rem;
+    color: var(--clr-primary-light);
+  }
+  .rates .rates-list img {
+    display: none;
+  }
+  .rates .rates-list p {
+    text-align: center;
+    margin: 1rem auto;
+    min-width: 15rem;
+    font-weight: 500;
+    border-left: none;
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .rates .rates-list {
+    display: block;
+  }
+  .rates-list div {
+    padding: 1rem;
+    margin: 0.5rem;
+    justify-self: center;
+  }
+
+  .gift-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .gift p {
+    margin: 0;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .gift h1 {
+    color: var(--clr-primary-light);
+    font-size: 2.8rem;
+    margin: 3rem auto;
+    text-align: center;
+  }
+  .gift .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: 2rem;
+  }
+
+  .gift .btns .btn {
+    margin: 2rem;
+    font-weight: 500;
   }
 }
